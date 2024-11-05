@@ -25,6 +25,6 @@ http.get('/welcome', (req, res) => {
   //Server bind to hello
   ws.bind('hello', (message) => {
    logger.infoMessage(`Receiver message: ${message}`)
-    // ...and send back 'print-response'
+
     return new WebSocketMessage().setCommand('hello').setPayload({ message: "Hello browser!"});
   });
